@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOAN AMOUNT CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<body>
+    <h2>&#128180; LOAN AMOUNT CALCULATOR &#128180;</h2>
+    <div class="calculator">
+        <div class="type">
+            <p>Interest Type:</p>
+            <select name="interest-type" id="type" onchange="intType()">
+                <option value="SI">Simple Interest</option>
+                <option value="CI">Compound Interest</option>
+            </select>
+        </div>
+        <div class="type compound">
+            <p>Compound Frequency:</p>
+            <select name="compound-frequency" id="ctype">
+                <option value="daily">daily</option>
+                <option value="week">weekly</option>
+                <option value="month">monthly</option>
+                <option value="quart">quarterly</option>
+                <option value="semi">semi-annually</option>
+                <option value="annual">yearly</option>
+            </select>
+        </div>
+        <div class="principle">
+            <p>Principal Amount(₹):</p>
+            <input type="number" id="value" placeholder="0">
+        </div>
+        <div class="principle rate">
+            <p>Annual rate:(%)</p>
+            <input type="number" id="rate">
+        </div>
+        <div class="principle period">
+            <p>Period in Years:</p>
+            <input type="number" id="period">
+        </div>
+        <button id="final" onclick="amountCal()">Calculate</button>
+        <div class="values">
+            <h4 id="earned">Interest Earned: </h4>
+            <h4 id="principal">Principal Amount: </h4>
+            <h4 id="finamount">Total Value: </h4>
+        </div>
+    </div>
+    <script src="interest.js"></script>
+</body>
+</html>
